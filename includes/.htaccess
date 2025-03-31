@@ -1,0 +1,8 @@
+# Deny direct access to all PHP files inside the includes folder
+<FilesMatch "\.(php)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Optional: Redirect unauthorized access attempts
+ErrorDocument 403 "Access Forbidden"
